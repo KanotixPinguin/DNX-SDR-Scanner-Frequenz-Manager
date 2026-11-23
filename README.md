@@ -114,3 +114,12 @@ Eine profilübergreifende Scanliste ist technisch möglich, muss aber als getren
 - normale Nutzer bleiben auf das aktuell geöffnete Profil begrenzt
 
 Diese Funktion ist in Version 1.2.0 noch nicht aktiviert.
+
+---
+
+## Verbindungen im DNX-Ökosystem
+
+![DNX Gesamtarchitektur & Verbindungen](docs/dnx-architektur-verbindungen.png)
+
+* **Verbindung zu `DNX-Styler` (`#dnx-fm-window` & `t_favoriten`):** Im Styler-Block `#dnx-blk-tools` schaltet **`Favoriten / Scanner`** (`t_favoriten`) das Scanner-Fenster direkt ein/aus (`#dnx-fm-launch`).
+* **Verbindung zu `DNX-Receiver-Account-Control` (`:8095/api/me`):** Die Rechte **`scanner`** und **`favorites`** (sowie `profile_switch` beim Bandwechsel) trennen zwischen Gast-Leseansicht und aktiver Bereichs-/Frequenzsteuerung.
